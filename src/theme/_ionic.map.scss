@@ -1,0 +1,84 @@
+// ============================================
+// MAPEO IONIC
+// Mapea nuestros tokens semánticos a variables nativas de Ionic
+// ============================================
+
+:root {
+  // Backgrounds
+  --ion-background-color: var(--surface);
+  --ion-background-color-rgb: 255, 255, 255;
+
+  // Text
+  --ion-text-color: var(--text);
+  --ion-text-color-rgb: 20, 20, 23;
+
+  // Border
+  --ion-border-color: var(--border);
+
+  // Primary
+  --ion-color-primary: var(--primary);
+  --ion-color-primary-rgb: 102, 102, 102;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: var(--primary-strong);
+  --ion-color-primary-tint: var(--raw-primary-100);
+
+  // Success
+  --ion-color-success: var(--success);
+  --ion-color-success-rgb: 16, 185, 129;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+
+  // Warning
+  --ion-color-warning: var(--warning);
+  --ion-color-warning-rgb: 245, 158, 11;
+  --ion-color-warning-contrast: #000000;
+  --ion-color-warning-contrast-rgb: 0, 0, 0;
+
+  // Danger
+  --ion-color-danger: var(--danger);
+  --ion-color-danger-rgb: 239, 68, 68;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+}
+
+// Dark theme overrides
+:root[data-theme="dark"] {
+  // Backgrounds
+  --ion-background-color: var(--surface);
+  --ion-background-color-rgb: 20, 20, 23;
+
+  // Text
+  --ion-text-color: var(--text);
+  --ion-text-color-rgb: 255, 255, 255;
+
+  // Border
+  --ion-border-color: var(--border);
+
+  // Primary
+  --ion-color-primary: var(--primary);
+  --ion-color-primary-rgb: 102, 102, 102;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: var(--primary-strong);
+  --ion-color-primary-tint: var(--raw-primary-100);
+
+  // Success
+  --ion-color-success: var(--success);
+  --ion-color-success-rgb: 16, 185, 129;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+
+  // Warning
+  --ion-color-warning: var(--warning);
+  --ion-color-warning-rgb: 245, 158, 11;
+  --ion-color-warning-contrast: #000000;
+  --ion-color-warning-contrast-rgb: 0, 0, 0;
+
+  // Danger
+  --ion-color-danger: var(--danger);
+  --ion-color-danger-rgb: 239, 68, 68;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+}
+

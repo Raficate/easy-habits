@@ -1,1 +1,58 @@
+/* TABS PAGE STYLES - DESIGN TOKENS */
 
+/* TAB BAR */
+ion-tab-bar {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+
+/* TAB BUTTONS */
+ion-tab-button {
+  color: var(--tab-color-inactive);
+}
+
+ion-tab-button ion-icon,
+ion-tab-button ion-label {
+  color: inherit;
+}
+
+ion-tab-button.tab-selected {
+  color: var(--tab-color-active);
+}
+
+/* HEADER */
+ion-header {
+  background: var(--surface);
+}
+
+ion-header ion-toolbar {
+  background: var(--surface);
+  --background: var(--surface);
+}
+
+ion-header ion-title {
+  color: var(--text);
+}
+
+/* SEGMENT */
+ion-segment {
+  background: transparent;
+}
+
+ion-segment-button {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  --indicator-color: var(--primary);
+}
+
+ion-segment-button.segment-button-checked {
+  color: var(--primary);
+  font-weight: var(--fw-semibold);
+}
+
+/* CONTENT */
+ion-content {
+  --background: var(--surface);
+  background: var(--surface);
+}

@@ -1,0 +1,90 @@
+// ============================================
+// SEMANTIC TOKENS (LIGHT THEME)
+// Nombres con intención: surface, text, primary
+// ============================================
+
+@import './tokens.raw';
+
+:root {
+  // Exponemos raw como CSS vars (necesario para referencias)
+  @include export-raw-css-vars;
+
+  // ===== COLORES SEMÁNTICOS =====
+  // Superficies (fondos)
+  --surface: var(--raw-gray-0);
+  --surface-alt: var(--raw-gray-50);
+  --surface-elev: var(--raw-gray-100);
+  --surface-elev-2: var(--raw-gray-200);
+
+  // Textos
+  --text: var(--raw-gray-900);
+  --text-secondary: var(--raw-gray-700);
+  --text-muted: var(--raw-gray-600);
+  --text-disabled: var(--raw-gray-400);
+
+  // Colores de marca / primario (Gris, no azul)
+  --primary: var(--raw-primary-500);
+  --primary-strong: var(--raw-primary-600);
+  --primary-stronger: var(--raw-primary-700);
+  --primary-light: var(--raw-primary-100);
+
+  // Estados
+  --success: var(--raw-success-500);
+  --warning: var(--raw-warning-500);
+  --danger: var(--raw-danger-500);
+  --info: var(--raw-info-500);
+
+  // Bordes
+  --border: rgba(0, 0, 0, 0.08);
+  --border-subtle: rgba(0, 0, 0, 0.04);
+  --border-strong: rgba(0, 0, 0, 0.16);
+
+  // Overlay / Scrim (para modales, etc.)
+  --scrim: rgba(0, 0, 0, 0.32);
+
+  // ===== TIPOGRAFÍA SEMÁNTICA =====
+  --font-family: var(--font-sans);
+  --font-size-base: var(--fs-md);
+  --font-weight-normal: var(--fw-regular);
+  --font-weight-emphasis: var(--fw-semibold);
+  --line-height-base: var(--lh-normal);
+
+  // ===== ESPACIADO SEMÁNTICO =====
+  --space-xs: var(--sp-1);
+  --space-sm: var(--sp-2);
+  --space-md: var(--sp-4);
+  --space-lg: var(--sp-6);
+  --space-xl: var(--sp-8);
+  --space-2xl: var(--sp-12);
+
+  // ===== RADIOS / BORDES SEMÁNTICOS =====
+  --card-radius: var(--radius-md);
+  --button-radius: var(--radius-sm);
+  --input-radius: var(--radius-sm);
+  --divider-size: var(--border-thin);
+
+  // ===== SOMBRAS SEMÁNTICAS =====
+  --card-shadow: var(--elev-1);
+  --card-shadow-hover: var(--elev-2);
+  --popover-shadow: var(--elev-3);
+  --modal-shadow: var(--elev-4);
+
+  // ===== TRANSICIONES =====
+  --transition-fast: var(--dur-fast) var(--ease-standard);
+  --transition-base: var(--dur-base) var(--ease-standard);
+  --transition-slow: var(--dur-slow) var(--ease-standard);
+
+  // ===== COLORES ADICIONALES PARA TABS E ICONOS =====
+  --tab-color-inactive: var(--raw-gray-600);
+  --tab-color-active: var(--text);
+}
+
+// ===== APLICAR FUENTES =====
+body, html {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--text);
+  background-color: var(--surface);
+  line-height: var(--line-height-base);
+}
+

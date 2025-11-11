@@ -1,0 +1,51 @@
+// ============================================
+// THEME DARK OVERRIDES
+// Se activa con data-theme="dark" en el <html>
+// ============================================
+
+:root[data-theme="dark"] {
+  // ===== COLORES SEMÁNTICOS (DARK) =====
+  // Superficies
+  --surface: var(--raw-gray-900);
+  --surface-alt: #0f0f12;
+  --surface-elev: var(--raw-gray-800);
+  --surface-elev-2: var(--raw-gray-700);
+
+  // Textos
+  --text: var(--raw-gray-0);
+  --text-secondary: var(--raw-gray-100);
+  --text-muted: var(--raw-gray-400);
+  --text-disabled: var(--raw-gray-600);
+
+  // Primario (mismo gris oscuro)
+  --primary: var(--raw-primary-500);
+  --primary-strong: var(--raw-primary-600);
+  --primary-stronger: var(--raw-primary-700);
+  --primary-light: #1e1e1e;
+
+  // Estados
+  --success: var(--raw-success-500);
+  --warning: var(--raw-warning-500);
+  --danger: var(--raw-danger-500);
+  --info: var(--raw-info-500);
+
+  // Bordes (más sutiles en dark)
+  --border: rgba(255, 255, 255, 0.12);
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-strong: rgba(255, 255, 255, 0.24);
+
+  // Overlay
+  --scrim: rgba(0, 0, 0, 0.64);
+
+  // ===== SOMBRAS SEMÁNTICAS (DARK) =====
+  // En dark, las sombras suelen ser más sutiles o ninguna
+  --card-shadow: none;
+  --card-shadow-hover: var(--elev-1);
+  --popover-shadow: var(--elev-2);
+  --modal-shadow: var(--elev-3);
+
+  // ===== COLORES ADICIONALES PARA TABS E ICONOS =====
+  --tab-color-inactive: var(--raw-gray-500);
+  --tab-color-active: var(--raw-gray-0);
+}
+

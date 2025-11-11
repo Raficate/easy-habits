@@ -7,30 +7,25 @@ export const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'to-do-list',
         loadComponent: () =>
-          import('../tab1/tab1.page').then((m) => m.Tab1Page),
+          import('../pages/to-do-list/to-do-list.page').then((m) => m.ToDoListPage),
       },
       {
-        path: 'tab2',
+        path: 'habit-list',
         loadComponent: () =>
-          import('../tab2/tab2.page').then((m) => m.Tab2Page),
-      },
-      {
-        path: 'tab3',
-        loadComponent: () =>
-          import('../tab3/tab3.page').then((m) => m.Tab3Page),
+          import('../pages/habit-list/habit-list.page').then((m) => m.HabitListPage),
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/to-do-list',
         pathMatch: 'full',
       },
     ],
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/to-do-list',
     pathMatch: 'full',
   },
 ];

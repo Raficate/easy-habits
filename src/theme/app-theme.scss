@@ -1,0 +1,18 @@
+// ============================================
+// APP THEME - PUNTO DE ENTRADA ÚNICO
+// Importa todos los archivos de tema en orden correcto
+// ============================================
+
+@import './tokens.raw';
+@import './tokens.semantic';
+@import './theme.dark';
+@import './ionic.map';
+
+// Utilidades opcionales
+:root {
+  // Aliases adicionales si los necesitas
+  --radius-card: var(--card-radius);
+  --radius-button: var(--button-radius);
+  --radius-input: var(--input-radius);
+}
+

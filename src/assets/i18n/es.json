@@ -1,0 +1,19 @@
+{
+  "app": {
+    "title": "Easy Habits"
+  },
+  "tabs": {
+    "tareas": "Tareas",
+    "habitos": "Hábitos"
+  },
+  "todo": {
+    "titulo": "Lista de Tareas",
+    "agregarTarea": "Agregar Tarea",
+    "noTareas": "No hay tareas"
+  },
+  "habits": {
+    "titulo": "Mis Hábitos",
+    "agregarHabito": "Agregar Hábito",
+    "noHabitos": "No hay hábitos"
+  }
+}

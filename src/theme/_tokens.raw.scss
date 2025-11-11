@@ -1,0 +1,219 @@
+// ============================================
+// DESIGN TOKENS (RAW/BASE) - SCSS Maps
+// Valores puros: colores, tipografías, espacios
+// ============================================
+
+// ===== PALETA DE COLORES BASE =====
+$raw: (
+  // Grises
+  gray-0: #ffffff,
+  gray-50: #f7f7f8,
+  gray-100: #efeff1,
+  gray-200: #e7e7eb,
+  gray-300: #d3d3db,
+  gray-400: #b3b3c3,
+  gray-500: #7b7b8f,
+  gray-600: #5b5b63,
+  gray-700: #3f3f47,
+  gray-800: #1f1f22,
+  gray-900: #141417,
+  black: #000000,
+
+  // Primario (Gris - reemplaza el azul)
+  primary-50: #f0f0f0,
+  primary-100: #e0e0e0,
+  primary-500: #666666,
+  primary-600: #4a4a4a,
+  primary-700: #333333,
+
+  // Estados
+  success-500: #10b981,
+  warning-500: #f59e0b,
+  danger-500: #ef4444,
+  info-500: #06b6d4
+);
+
+// ===== TIPOGRAFÍA =====
+$font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+$font-mono: "Courier New", monospace;
+
+// Escala de tamaños de fuente
+$fs: (
+  xs: 12px,
+  sm: 14px,
+  md: 16px,
+  lg: 18px,
+  xl: 20px,
+  x2l: 24px,
+  x3l: 32px
+);
+
+// Pesos de fuente
+$fw: (
+  regular: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700
+);
+
+// Line heights
+$lh: (
+  tight: 1.2,
+  normal: 1.5,
+  relaxed: 1.75
+);
+
+// ===== ESPACIADO =====
+$sp: (
+  0: 0,
+  1: 4px,
+  2: 8px,
+  3: 12px,
+  4: 16px,
+  5: 20px,
+  6: 24px,
+  8: 32px,
+  10: 40px,
+  12: 48px,
+  16: 64px
+);
+
+// ===== RADIOS / BORDES =====
+$radius: (
+  xs: 4px,
+  sm: 6px,
+  md: 10px,
+  lg: 14px,
+  xl: 20px,
+  full: 9999px
+);
+
+$border: (
+  thin: 1px,
+  md: 2px
+);
+
+// ===== SOMBRAS =====
+$elev: (
+  0: none,
+  1: 0 1px 2px rgba(0, 0, 0, 0.08),
+  2: 0 3px 8px rgba(0, 0, 0, 0.12),
+  3: 0 8px 16px rgba(0, 0, 0, 0.14),
+  4: 0 12px 24px rgba(0, 0, 0, 0.16)
+);
+
+// ===== DURACIONES / CURVAS DE ANIMACIÓN =====
+$dur: (
+  fast: 120ms,
+  base: 200ms,
+  slow: 300ms
+);
+
+$ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+$ease-in: cubic-bezier(0.4, 0, 1, 1);
+$ease-out: cubic-bezier(0, 0, 0.2, 1);
+
+// ===== HELPER FUNCTIONS =====
+// Helper para leer maps de forma más limpia
+@function m($map, $key) {
+  @return map-get($map, $key);
+}
+
+// ===== MIXIN: EXPORTAR RAW COMO CSS VARIABLES =====
+// Este mixin genera todas las CSS variables desde los maps SCSS
+// Necesario para que el theming runtime de Ionic funcione
+@mixin export-raw-css-vars {
+  // Colores base
+  --raw-gray-0: #{m($raw, gray-0)};
+  --raw-gray-50: #{m($raw, gray-50)};
+  --raw-gray-100: #{m($raw, gray-100)};
+  --raw-gray-200: #{m($raw, gray-200)};
+  --raw-gray-300: #{m($raw, gray-300)};
+  --raw-gray-400: #{m($raw, gray-400)};
+  --raw-gray-500: #{m($raw, gray-500)};
+  --raw-gray-600: #{m($raw, gray-600)};
+  --raw-gray-700: #{m($raw, gray-700)};
+  --raw-gray-800: #{m($raw, gray-800)};
+  --raw-gray-900: #{m($raw, gray-900)};
+  --raw-black: #{m($raw, black)};
+
+  // Primario
+  --raw-primary-50: #{m($raw, primary-50)};
+  --raw-primary-100: #{m($raw, primary-100)};
+  --raw-primary-500: #{m($raw, primary-500)};
+  --raw-primary-600: #{m($raw, primary-600)};
+  --raw-primary-700: #{m($raw, primary-700)};
+
+  // Estados
+  --raw-success-500: #{m($raw, success-500)};
+  --raw-warning-500: #{m($raw, warning-500)};
+  --raw-danger-500: #{m($raw, danger-500)};
+  --raw-info-500: #{m($raw, info-500)};
+
+  // Tipografía
+  --font-sans: #{$font-sans};
+  --font-mono: #{$font-mono};
+
+  // Tamaños de fuente
+  --fs-xs: #{m($fs, xs)};
+  --fs-sm: #{m($fs, sm)};
+  --fs-md: #{m($fs, md)};
+  --fs-lg: #{m($fs, lg)};
+  --fs-xl: #{m($fs, xl)};
+  --fs-2xl: #{m($fs, x2l)};
+  --fs-3xl: #{m($fs, x3l)};
+
+  // Pesos de fuente
+  --fw-regular: #{m($fw, regular)};
+  --fw-medium: #{m($fw, medium)};
+  --fw-semibold: #{m($fw, semibold)};
+  --fw-bold: #{m($fw, bold)};
+
+  // Line heights
+  --lh-tight: #{m($lh, tight)};
+  --lh-normal: #{m($lh, normal)};
+  --lh-relaxed: #{m($lh, relaxed)};
+
+  // Espaciado
+  --sp-0: #{m($sp, 0)};
+  --sp-1: #{m($sp, 1)};
+  --sp-2: #{m($sp, 2)};
+  --sp-3: #{m($sp, 3)};
+  --sp-4: #{m($sp, 4)};
+  --sp-5: #{m($sp, 5)};
+  --sp-6: #{m($sp, 6)};
+  --sp-8: #{m($sp, 8)};
+  --sp-10: #{m($sp, 10)};
+  --sp-12: #{m($sp, 12)};
+  --sp-16: #{m($sp, 16)};
+
+  // Radios
+  --radius-xs: #{m($radius, xs)};
+  --radius-sm: #{m($radius, sm)};
+  --radius-md: #{m($radius, md)};
+  --radius-lg: #{m($radius, lg)};
+  --radius-xl: #{m($radius, xl)};
+  --radius-full: #{m($radius, full)};
+
+  // Bordes
+  --border-thin: #{m($border, thin)};
+  --border-md: #{m($border, md)};
+
+  // Sombras
+  --elev-0: #{m($elev, 0)};
+  --elev-1: #{m($elev, 1)};
+  --elev-2: #{m($elev, 2)};
+  --elev-3: #{m($elev, 3)};
+  --elev-4: #{m($elev, 4)};
+
+  // Duraciones
+  --dur-fast: #{m($dur, fast)};
+  --dur-base: #{m($dur, base)};
+  --dur-slow: #{m($dur, slow)};
+
+  // Curvas de animación
+  --ease-standard: #{$ease-standard};
+  --ease-in: #{$ease-in};
+  --ease-out: #{$ease-out};
+}
+
